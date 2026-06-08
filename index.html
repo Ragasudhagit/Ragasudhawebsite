@@ -1,728 +1,925 @@
 <!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Raga Sudha | Premium Web Design &amp; No-Code Development</title>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Raga Sudha | Premium Web Design &amp; No-Code Development</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-fixed-variant": "#474646",
-                        "on-secondary": "#2f312e",
-                        "tertiary-container": "#1a1000",
-                        "primary-fixed": "#e5e2e1",
-                        "primary": "#c8c6c5",
-                        "surface-container-lowest": "#0e0e0e",
-                        "on-tertiary-fixed-variant": "#5d4201",
-                        "inverse-surface": "#e4e2e1",
-                        "surface-container-low": "#1b1c1c",
-                        "secondary-fixed": "#e3e3de",
-                        "surface-bright": "#393939",
-                        "surface-variant": "#353535",
-                        "inverse-primary": "#5f5e5e",
-                        "surface": "#131313",
-                        "surface-dim": "#131313",
-                        "primary-container": "#121212",
-                        "error-container": "#93000a",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-highest": "#353535",
-                        "surface-tint": "#c8c6c5",
-                        "secondary": "#c6c7c2",
-                        "on-tertiary": "#412d00",
-                        "outline-variant": "#444748",
-                        "inverse-on-surface": "#303030",
-                        "secondary-container": "#484a46",
-                        "on-background": "#e4e2e1",
-                        "tertiary": "#e9c176",
-                        "on-primary-container": "#7e7d7d",
-                        "on-secondary-fixed": "#1a1c19",
-                        "on-error": "#690005",
-                        "on-surface-variant": "#c4c7c7",
-                        "surface-container": "#1f2020",
-                        "surface-container-high": "#2a2a2a",
-                        "on-secondary-fixed-variant": "#454744",
-                        "error": "#ffb4ab",
-                        "tertiary-fixed": "#ffdea5",
-                        "on-tertiary-fixed": "#261900",
-                        "on-secondary-container": "#b8b9b4",
-                        "tertiary-fixed-dim": "#e9c176",
-                        "on-surface": "#e4e2e1",
-                        "outline": "#8e9192",
-                        "on-tertiary-container": "#997835",
-                        "primary-fixed-dim": "#c8c6c5",
-                        "on-primary": "#313030",
-                        "on-primary-fixed": "#1c1b1b",
-                        "secondary-fixed-dim": "#c6c7c2",
-                        "background": "#131313"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "container-max": "1280px",
-                        "section-gap": "160px",
-                        "margin-mobile": "24px",
-                        "unit": "8px",
-                        "margin-desktop": "64px",
-                        "gutter": "32px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Playfair Display"],
-                        "display-lg": ["Playfair Display"],
-                        "label-caps": ["Inter"],
-                        "headline-lg-mobile": ["Playfair Display"],
-                        "headline-lg": ["Playfair Display"],
-                        "display-lg-mobile": ["Playfair Display"],
-                        "body-lg": ["Inter"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
-                    }
-                }
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#474646",
+              "on-secondary": "#2f312e",
+              "tertiary-container": "#1a1000",
+              "primary-fixed": "#e5e2e1",
+              primary: "#c8c6c5",
+              "surface-container-lowest": "#0e0e0e",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "inverse-surface": "#e4e2e1",
+              "surface-container-low": "#1b1c1c",
+              "secondary-fixed": "#e3e3de",
+              "surface-bright": "#393939",
+              "surface-variant": "#353535",
+              "inverse-primary": "#5f5e5e",
+              surface: "#131313",
+              "surface-dim": "#131313",
+              "primary-container": "#121212",
+              "error-container": "#93000a",
+              "on-error-container": "#ffdad6",
+              "surface-container-highest": "#353535",
+              "surface-tint": "#c8c6c5",
+              secondary: "#c6c7c2",
+              "on-tertiary": "#412d00",
+              "outline-variant": "#444748",
+              "inverse-on-surface": "#303030",
+              "secondary-container": "#484a46",
+              "on-background": "#e4e2e1",
+              tertiary: "#e9c176",
+              "on-primary-container": "#7e7d7d",
+              "on-secondary-fixed": "#1a1c19",
+              "on-error": "#690005",
+              "on-surface-variant": "#c4c7c7",
+              "surface-container": "#1f2020",
+              "surface-container-high": "#2a2a2a",
+              "on-secondary-fixed-variant": "#454744",
+              error: "#ffb4ab",
+              "tertiary-fixed": "#ffdea5",
+              "on-tertiary-fixed": "#261900",
+              "on-secondary-container": "#b8b9b4",
+              "tertiary-fixed-dim": "#e9c176",
+              "on-surface": "#e4e2e1",
+              outline: "#8e9192",
+              "on-tertiary-container": "#997835",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-primary": "#313030",
+              "on-primary-fixed": "#1c1b1b",
+              "secondary-fixed-dim": "#c6c7c2",
+              background: "#131313"
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px"
+            },
+            spacing: {
+              "container-max": "1280px",
+              "section-gap": "160px",
+              "margin-mobile": "24px",
+              unit: "8px",
+              "margin-desktop": "64px",
+              gutter: "32px"
+            },
+            fontFamily: {
+              "headline-md": ["Playfair Display"],
+              "display-lg": ["Playfair Display"],
+              "label-caps": ["Inter"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "headline-lg": ["Playfair Display"],
+              "display-lg-mobile": ["Playfair Display"],
+              "body-lg": ["Inter"],
+              "body-md": ["Inter"]
+            },
+            fontSize: {
+              "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+              "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+              "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.15em", fontWeight: "600" }],
+              "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }],
+              "display-lg-mobile": ["48px", { lineHeight: "1.1", fontWeight: "700" }],
+              "body-lg": ["18px", { lineHeight: "1.6", letterSpacing: "0.01em", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
             }
+          }
         }
+      };
     </script>
-<style>
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .custom-cursor {
-            width: 20px; height: 20px;
-            border: 1px solid #e9c176;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
-        }
-        .hover-glow:hover { box-shadow: 0px 4px 20px rgba(233, 193, 118, 0.12); }
-        .scroll-indicator-circle { stroke-dasharray: 100; stroke-dashoffset: 100; transition: stroke-dashoffset 0.5s ease; }
-        .active-circle .scroll-indicator-circle { stroke-dashoffset: 0; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #131313; }
-        ::-webkit-scrollbar-thumb { background: #444748; border-radius: 10px; }
+
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #e9c176;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
+      }
+      .hover-glow:hover {
+        box-shadow: 0px 4px 20px rgba(233, 193, 118, 0.12);
+      }
+      .scroll-indicator-circle {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transition: stroke-dashoffset 0.5s ease;
+      }
+      .active-circle .scroll-indicator-circle {
+        stroke-dashoffset: 0;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #131313;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #444748;
+        border-radius: 10px;
+      }
     </style>
-        <script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
+  </head>
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  <body class="bg-background text-on-background font-body-md selection:bg-tertiary selection:text-on-tertiary overflow-x-hidden">
+    <div class="custom-cursor hidden md:block" id="cursor"></div>
 
-  reveals.forEach(el => observer.observe(el));
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/20">
+      <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <span class="font-headline-md text-headline-md font-bold text-on-surface">Raga Sudha</span>
 
-  // Mobile nav toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navMenuMobile = document.getElementById('nav-menu-mobile');
+        <!-- Desktop menu -->
+        <div class="hidden md:flex gap-10 items-center">
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#work">Work</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#services">Services</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
+          <a class="px-6 py-3 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity duration-300" href="#contact">Book a Call</a>
+        </div>
 
-  if (navToggle && navMenuMobile) {
-    navToggle.addEventListener('click', () => {
-      navMenuMobile.classList.toggle('hidden');
-    });
-  }
-</script>
-</body>
-</html>
-</head>
-<body class="bg-background text-on-background font-body-md selection:bg-tertiary selection:text-on-tertiary overflow-x-hidden">
-  <div class="custom-cursor hidden md:block" id="cursor"></div>
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/20">
-    <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-      <span class="font-headline-md text-headline-md font-bold text-on-surface">Raga Sudha</span>
-      <!-- Desktop menu -->
-      <div id="nav-menu" class="hidden md:flex gap-10 items-center">
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#work">Work</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#services">Services</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
-        <a class="px-6 py-3 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity duration-300" href="#contact">Book a Call</a>
+        <!-- Mobile menu button -->
+        <button id="nav-toggle" class="md:hidden text-on-surface material-symbols-outlined">menu</button>
       </div>
-      <!-- Mobile menu button -->
-      <button id="nav-toggle" class="md:hidden text-on-surface material-symbols-outlined">menu</button>
-    </div>
-    <!-- Mobile dropdown -->
-    <div id="nav-menu-mobile" class="md:hidden hidden border-t border-outline-variant/20 bg-background">
-      <div class="flex flex-col px-margin-mobile py-4 space-y-3">
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#work">Work</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#services">Services</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
-        <a class="font-body-md text-body-md uppercase tracking-widest text-tertiary hover:text-on-surface transition-colors duration-300" href="#contact">Book a Call</a>
-      </div>
-    </div>
-  </nav>
 
-  <main class="mt-20">
-    <!-- Hero Section -->
-    <section class="min-h-[90vh] flex items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-20 reveal">
-      <div class="flex flex-col-reverse md:flex-row items-center gap-gutter">
-        <!-- Text -->
-        <div class="md:w-1/2">
-          <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Get a website that looks premium...</h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">
-            I design and build complete static websites that command attention and convert visitors into loyal clients through bespoke digital craftsmanship.
+      <!-- Mobile dropdown -->
+      <div id="nav-menu-mobile" class="md:hidden hidden border-t border-outline-variant/20 bg-background">
+        <div class="flex flex-col px-margin-mobile py-4 space-y-3">
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#work">Work</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#services">Services</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
+          <a class="font-body-md text-body-md uppercase tracking-widest text-tertiary hover:text-on-surface transition-colors duration-300" href="#contact">Book a Call</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mt-20">
+      <!-- Hero Section -->
+      <section class="min-h-[90vh] flex items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-20 reveal">
+        <div class="flex flex-col-reverse md:flex-row items-center gap-gutter">
+          <!-- Text -->
+          <div class="md:w-1/2">
+            <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">
+              Get a website that looks premium...
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">
+              I design and build complete static websites that command attention and convert visitors into loyal clients through bespoke digital
+              craftsmanship.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <a
+                class="px-8 py-4 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase text-center hover:opacity-90 transition-all"
+                href="https://cal.com/theragasudha-info-amnqo1/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Book a Free 30-Minute Discovery Call</a
+              >
+              <a
+                class="px-8 py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase text-center hover:bg-tertiary/10 transition-all"
+                href="#work"
+                >View My Work</a
+              >
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div class="md:w-1/2 flex justify-center md:justify-end">
+            <div class="relative w-full max-w-[450px] aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700">
+              <img
+                alt="Raga Sudha Professional Portrait"
+                class="w-full h-full object-cover rounded shadow-2xl"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnJuqKlNRzx7yIObZT9bdbfZMK6W-S8cIGNH5sQ1hYeOEomilgPZ3RhSOBXfVzLYvsWBRz0bsDx341zY0Fyqi6xYmWaJmSB9rc_pEYMwNlTAxFYknQ3wFmxUa-SRt1RgUCfBbMZXNdfNUkFxhpoc5Bx71eHEmyC2QFcmiMC4nENWkazKP-rjw6VonFdMonp4KkqXA3M7dI5RKulogl2yVbetCkZeDYNk-ROECgChH-Fx7fmLFjQLDFIHR1peUUDSFsDQUFPGb0AKG6"
+              />
+              <div class="absolute inset-0 border border-tertiary/20 translate-x-4 translate-y-4 -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- I Take Your Project Seriously -->
+      <section class="py-section-gap bg-surface-container-lowest reveal">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+          <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Commitment</span>
+          <h2 class="font-headline-lg text-headline-lg mb-8 max-w-3xl mx-auto">I Take Your Project Seriously</h2>
+          <div class="w-24 h-px bg-tertiary mx-auto mb-12"></div>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            Professionalism isn't just a buzzword; it's the foundation of my practice. I don't just deliver files; I architect solutions. When we work
+            together, you're not getting a freelancer—you're getting a dedicated partner who values your time, your vision, and the premium standards
+            your brand deserves.
           </p>
-          <div class="flex flex-col sm:flex-row gap-6">
-            <a class="px-8 py-4 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase text-center hover:opacity-90 transition-all" href="https://cal.com/theragasudha-info-amnqo1/30min" target="_blank" rel="noopener noreferrer">Book a Free 30-Minute Discovery Call</a>
-            <a class="px-8 py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase text-center hover:bg-tertiary/10 transition-all" href="#work">View My Work</a>
+        </div>
+      </section>
+
+      <!-- Why Me vs Big Agencies -->
+      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+          <div>
+            <h2 class="font-headline-lg text-headline-lg mb-8">Boutique Dedication vs Agency Overhead</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+              Agencies often hide behind layers of project managers and account executives. With me, you get the person actually doing the work. You get
+              agility, direct communication, and a level of attention that no corporate agency can match.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+              <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Direct</h4>
+              <p class="font-label-caps text-label-caps uppercase opacity-60">Communication</p>
+            </div>
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+              <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Bespoke</h4>
+              <p class="font-label-caps text-label-caps uppercase opacity-60">Handcrafted</p>
+            </div>
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+              <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Focused</h4>
+              <p class="font-label-caps text-label-caps uppercase opacity-60">Single Point</p>
+            </div>
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+              <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Elite</h4>
+              <p class="font-label-caps text-label-caps uppercase opacity-60">Finishing</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Image -->
-        <div class="md:w-1/2 flex justify-center md:justify-end">
-          <div class="relative w-full max-w-[450px] aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700">
-            <img
-              alt="Raga Sudha Professional Portrait"
-              class="w-full h-full object-cover rounded shadow-2xl"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnJuqKlNRzx7yIObZT9bdbfZMK6W-S8cIGNH5sQ1hYeOEomilgPZ3RhSOBXfVzLYvsWBRz0bsDx341zY0Fyqi6xYmWaJmSB9rc_pEYMwNlTAxFYknQ3wFmxUa-SRt1RgUCfBbMZXNdfNUkFxhpoc5Bx71eHEmyC2QFcmiMC4nENWkazKP-rjw6VonFdMonp4KkqXA3M7dI5RKulogl2yVbetCkZeDYNk-ROECgChH-Fx7fmLFjQLDFIHR1peUUDSFsDQUFPGb0AKG6"
-            />
-            <div class="absolute inset-0 border border-tertiary/20 translate-x-4 translate-y-4 -z-10"></div>
+      <!-- What Makes Me Different -->
+      <section class="py-section-gap bg-surface-container-lowest reveal">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="grid md:grid-cols-2 gap-gutter items-center">
+            <div class="relative aspect-[4/5] hidden md:block">
+              <img
+                alt="Creative Studio Environment"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTr56mgo38NgpeV_5W-cl0C7jIymEY38kfg4E-CEHdCy-W3lCW33AzSn8-MsJ0tYxwJJ5XiM04aLiItyCW1msYDrB64koD6ss3ny54CAIhUbTBnna0dE0-2i4v1saOITPcVNVp_kq-OxI-uxoAQCXw2Jl237BBnhClCzPqoBkx1oi8ZSfVmUYuNQtr9nwFPAOGwC1btPqbXQJq2hUF0w0UuG-Wa16t33LLHpw0SKIFAwXDtyHHxrIvMSr403FTrAjn3qzWC_9LpjJr"
+              />
+              <div class="absolute -bottom-10 -right-10 p-10 bg-background border border-tertiary/20">
+                <span class="font-display-lg text-display-lg text-tertiary">5</span>
+                <p class="font-label-caps text-label-caps uppercase">Pillars of Excellence</p>
+              </div>
+            </div>
+            <div class="space-y-12">
+              <h2 class="font-headline-lg text-headline-lg">What Makes Me Different</h2>
+              <div class="space-y-8">
+                <div class="flex gap-6 group">
+                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">01</span>
+                  <div>
+                    <h4 class="font-headline-md text-headline-md mb-2">Bespoke design</h4>
+                    <p class="text-on-surface-variant">Every pixel is placed with intent. No templates, no shortcuts.</p>
+                  </div>
+                </div>
+                <div class="flex gap-6 group">
+                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">02</span>
+                  <div>
+                    <h4 class="font-headline-md text-headline-md mb-2">No-code build</h4>
+                    <p class="text-on-surface-variant">
+                      Lightning-fast performance and client-friendly management using Webflow and Framer.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-6 group">
+                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">03</span>
+                  <div>
+                    <h4 class="font-headline-md text-headline-md mb-2">Structured for clarity</h4>
+                    <p class="text-on-surface-variant">
+                      A logical flow that guides users effortlessly through your brand story.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-6 group">
+                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">04</span>
+                  <div>
+                    <h4 class="font-headline-md text-headline-md mb-2">Premium visuals</h4>
+                    <p class="text-on-surface-variant">
+                      Editorial-grade typography and carefully curated art direction.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-6 group">
+                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">05</span>
+                  <div>
+                    <h4 class="font-headline-md text-headline-md mb-2">Smooth process</h4>
+                    <p class="text-on-surface-variant">
+                      Crystal clear timelines and a frictionless onboarding experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="services">
+        <div class="text-center mb-24">
+          <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Expertise</span>
+          <h2 class="font-headline-lg text-headline-lg">Elevated Digital Services</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-12">
+          <div class="p-12 border border-outline-variant/10 hover-glow transition-all duration-500">
+            <span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="brush">brush</span>
+            <h3 class="font-headline-md text-headline-md mb-6">Custom Design</h3>
+            <p class="text-on-surface-variant">
+              Strategic visual identities and user interfaces that resonate with high-end audiences.
+            </p>
+          </div>
+          <div class="p-12 bg-surface-container-high border border-tertiary/20 hover-glow transition-all duration-500">
+            <span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="terminal">terminal</span>
+            <h3 class="font-headline-md text-headline-md mb-6">No-code Development</h3>
+            <p class="text-on-surface-variant">
+              Developing responsive, high-performance websites without the traditional code overhead.
+            </p>
+          </div>
+          <div class="p-12 border border-outline-variant/10 hover-glow transition-all duration-500">
+            <span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="refresh">refresh</span>
+            <h3 class="font-headline-md text-headline-md mb-6">Redesigns</h3>
+            <p class="text-on-surface-variant">
+              Transforming legacy sites into modern editorial powerhouses that drive growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="py-section-gap bg-surface-container-lowest reveal overflow-hidden" id="process">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <h2 class="font-headline-lg text-headline-lg mb-20">The Methodical Path to Success</h2>
+          <div class="grid md:grid-cols-4 gap-12">
+            <div class="process-step" data-step="1">
+              <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
+                <svg class="absolute inset-0 w-full h-full -rotate-90">
+                  <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
+                  <circle
+                    class="text-tertiary transition-all duration-1000 scroll-indicator-circle"
+                    cx="40"
+                    cy="40"
+                    fill="transparent"
+                    r="38"
+                    stroke="currentColor"
+                    stroke-dasharray="238"
+                    stroke-dashoffset="238"
+                    stroke-width="2"
+                  ></circle>
+                </svg>
+                <span class="font-headline-md text-headline-md text-tertiary">1</span>
+              </div>
+              <h4 class="font-headline-md text-headline-md mb-4">Discovery</h4>
+              <p class="text-on-surface-variant">Uncovering your brand's unique DNA and market position.</p>
+            </div>
+            <div class="process-step" data-step="2">
+              <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
+                <svg class="absolute inset-0 w-full h-full -rotate-90">
+                  <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
+                  <circle
+                    class="text-tertiary transition-all duration-1000 scroll-indicator-circle"
+                    cx="40"
+                    cy="40"
+                    fill="transparent"
+                    r="38"
+                    stroke="currentColor"
+                    stroke-dasharray="238"
+                    stroke-dashoffset="119"
+                    stroke-width="2"
+                  ></circle>
+                </svg>
+                <span class="font-headline-md text-headline-md text-tertiary">2</span>
+              </div>
+              <h4 class="font-headline-md text-headline-md mb-4">Direction</h4>
+              <p class="text-on-surface-variant">Establishing the aesthetic moodboard and user journey maps.</p>
+            </div>
+            <div class="process-step" data-step="3">
+              <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
+                <svg class="absolute inset-0 w-full h-full -rotate-90">
+                  <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
+                  <circle
+                    class="text-tertiary transition-all duration-1000 scroll-indicator-circle"
+                    cx="40"
+                    cy="40"
+                    fill="transparent"
+                    r="38"
+                    stroke="currentColor"
+                    stroke-dasharray="238"
+                    stroke-dashoffset="60"
+                    stroke-width="2"
+                  ></circle>
+                </svg>
+                <span class="font-headline-md text-headline-md text-tertiary">3</span>
+              </div>
+              <h4 class="font-headline-md text-headline-md mb-4">Design &amp; Build</h4>
+              <p class="text-on-surface-variant">
+                The iterative process of crafting and developing your site.
+              </p>
+            </div>
+            <div class="process-step" data-step="4">
+              <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
+                <svg class="absolute inset-0 w-full h-full -rotate-90">
+                  <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
+                  <circle
+                    class="text-tertiary transition-all duration-1000 scroll-indicator-circle"
+                    cx="40"
+                    cy="40"
+                    fill="transparent"
+                    r="38"
+                    stroke="currentColor"
+                    stroke-dasharray="238"
+                    stroke-dashoffset="0"
+                    stroke-width="2"
+                  ></circle>
+                </svg>
+                <span class="font-headline-md text-headline-md text-tertiary">4</span>
+              </div>
+              <h4 class="font-headline-md text-headline-md mb-4">Launch &amp; Support</h4>
+              <p class="text-on-surface-variant">Smooth deployment and long-term maintenance assurance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Work -->
+      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="work">
+        <div class="flex justify-between items-end mb-24">
+          <div>
+            <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Archive</span>
+            <h2 class="font-headline-lg text-headline-lg">Selected Work</h2>
+          </div>
+          <a
+            class="hidden md:block font-label-caps text-label-caps uppercase border-b border-tertiary pb-2 hover:opacity-70 transition-all"
+            href="#"
+            >Explore all projects</a
+          >
+        </div>
+
+        <div class="grid gap-40">
+          <!-- Project 01: Aarya Coaching -->
+          <div class="grid md:grid-cols-12 gap-10 items-center group">
+            <div class="md:col-span-7 aspect-video overflow-hidden">
+              <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105 relative">
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnOLGlxcVR9loOja85FsRXN_pf1vFZh1IF9PQ-u7yVue5t9pF7p5l2xj_drfqhLmxCVv3WatMZWtSrCyypAwST-vwAgMBVbWIuEfL7LKkATJVC3lvJJr6AxvQv7Fk2GujYdIjbYtIL5QwX1ktvquQFeoGibZh6UhA7KUZNYTQohWov2L3OSo93uvGKYxeo06D4tpwxJ8uN0YsgOqgUoH09mlvDhksbxS8-7JLicEQgeOjYTFcecb_MML7CJ0Sa2Qa3CuhtGn24-OVn"
+                  alt="A luxurious minimalist website mockup for Aarya Coaching, featuring elegant serif typography and an ivory and charcoal color palette on a sleek laptop display."
+                />
+              </div>
+            </div>
+            <div class="md:col-span-5 md:pl-10">
+              <span class="font-label-caps text-label-caps text-tertiary mb-4 block">01 / BRANDING &amp; WEB</span>
+              <h3 class="font-headline-lg text-headline-lg mb-6">Aarya Coaching</h3>
+              <p class="text-on-surface-variant mb-10">
+                An elite performance coaching platform focused on high-net-worth executives and entrepreneurs.
+              </p>
+              <a
+                class="inline-flex items-center gap-4 font-label-caps text-label-caps uppercase group"
+                href="https://ragasudhagit.github.io/Aaryacoaching/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Case Study
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 02: Aurelius -->
+          <div class="grid md:grid-cols-12 gap-10 items-center group">
+            <div class="md:col-span-5 md:order-1 order-2 md:pr-10">
+              <span class="font-label-caps text-label-caps text-tertiary mb-4 block">02 / E-COMMERCE</span>
+              <h3 class="font-headline-lg text-headline-lg mb-6">Aurelius</h3>
+              <p class="text-on-surface-variant mb-10">
+                A bespoke watch boutique requiring a digital experience as precise and timeless as their products.
+              </p>
+              <a
+                class="inline-flex items-center gap-4 font-label-caps text-label-caps uppercase group"
+                href="https://ragasudhagit.github.io/aurelius/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Case Study
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+              </a>
+            </div>
+            <div class="md:col-span-7 md:order-2 order-1 aspect-video overflow-hidden">
+              <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105">
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqhqUHIzolR0hY8ptdX1B0psijV9pC8wVUYwPpSN4NkpJIDssrPoAW0EUOaI7asksmto5aOgmBsGV_gnRkYL58NO0VGZX8TCl1X9YSsPyo8oUYVPmYFRnXplupLlnb5qiesrfYlyDQe6PP21TzlRglgku-8aZVz303sHOz0qyBWl1eIWv3eRcQVWKM47tSsQ17pHZ8sZsWl1xMV-MJeQkoJ2ro2fkkRalVflyfz0lPCGvqcdl9vsPQ5ZM7dJkUsMswP2QdO9A1pYNe"
+                  alt="A sophisticated e-commerce interface mockup for Aurelius watches, displaying a high-resolution photograph of a luxury timepiece surrounded by clean layouts and gold accents."
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 03: Applied Accounting -->
+          <div class="grid md:grid-cols-12 gap-10 items-center group">
+            <div class="md:col-span-7 aspect-video overflow-hidden">
+              <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105">
+                <img
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3VTwm5XaS2zTJUyd7sMiwTc8TrMRF9N5bJ4QOMwjIRs0JqQSQctvQWw-7u8qQXZxWEnyzQeQv3_pFILovkf2FQMFznxE57s13soGzIUlW3QMntKdz23uOV9PMA6lGUBUUw-XMIZ2jlffnI4aw4iVrNyZ5BtUiHWwCwIY-UtS9bsR8I931lmWgpmKtrNDdl_fx5ifJhYe4Af3fJC3ECzF52S3tHMYIL_V7zpFp6eSTwaL2hvVmBhB0bq2YNCE8At2llpK44VeVelzf"
+                  alt="A professional dashboard design for Applied Accounting, with clean data visualizations and minimalist charts."
+                />
+              </div>
+            </div>
+            <div class="md:col-span-5 md:pl-10">
+              <span class="font-label-caps text-label-caps text-tertiary mb-4 block">03 / SAAS</span>
+              <h3 class="font-headline-lg text-headline-lg mb-6">Applied Accounting</h3>
+              <p class="text-on-surface-variant mb-10">
+                Modernizing the digital presence of a top-tier accounting firm through clean, data-driven design.
+              </p>
+              <a
+                class="inline-flex items-center gap-4 font-label-caps text-label-caps uppercase group"
+                href="https://ragasudhagit.github.io/applied-accounting-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Case Study
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="py-section-gap bg-surface-container-lowest reveal" id="pricing">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="text-center mb-24">
+            <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Investment</span>
+            <h2 class="font-headline-lg text-headline-lg">Transparent Tiered Solutions</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Landing Page -->
+            <div class="p-10 border border-outline-variant/10 bg-background hover-glow transition-all">
+              <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Standard</h4>
+              <h3 class="font-headline-md text-headline-md mb-8">Landing Page</h3>
+              <div class="mb-10">
+                <span class="text-4xl font-bold font-headline-md">From $299</span>
+                <p class="text-on-surface-variant text-sm mt-2">≈ ₹24,499+ INR</p>
+              </div>
+              <ul class="space-y-4 mb-12 text-on-surface-variant">
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Single High-Conversion Page
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Mobile Responsive
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> 1-Week Delivery
+                </li>
+              </ul>
+              <a
+                class="w-full block text-center py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase hover:bg-tertiary/10"
+                href="https://forms.gle/EqWWU8xf4Rw3Wosx9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get Started</a
+              >
+            </div>
+
+            <!-- 5-Page -->
+            <div class="p-10 border-2 border-tertiary bg-surface-container-high relative scale-105 z-10 shadow-2xl">
+              <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-tertiary text-on-tertiary px-4 py-1 font-label-caps text-[10px] uppercase tracking-widest">
+                Most Chosen
+              </div>
+              <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Business</h4>
+              <h3 class="font-headline-md text-headline-md mb-8">5-Page Website</h3>
+              <div class="mb-10">
+                <span class="text-4xl font-bold font-headline-md">From $599</span>
+                <p class="text-on-surface-variant text-sm mt-2">≈ ₹54,499+ INR</p>
+              </div>
+              <ul class="space-y-4 mb-12 text-on-surface-variant">
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Complete Brand Ecosystem
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> CMS for Blog/Portfolio
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Advanced SEO Setup
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> 3-Week Delivery
+                </li>
+              </ul>
+              <a
+                class="w-full block text-center py-4 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:opacity-90"
+                href="https://forms.gle/EqWWU8xf4Rw3Wosx9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Start Now</a
+              >
+            </div>
+
+            <!-- Custom -->
+            <div class="p-10 border border-outline-variant/10 bg-background hover-glow transition-all">
+              <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Enterprise</h4>
+              <h3 class="font-headline-md text-headline-md mb-8">Custom Solution</h3>
+              <div class="mb-10">
+                <span class="text-4xl font-bold font-headline-md">From $1000</span>
+                <p class="text-on-surface-variant text-sm mt-2">≈ ₹98,999+ INR</p>
+              </div>
+              <ul class="space-y-4 mb-12 text-on-surface-variant">
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Complex Interactions
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Unlimited Subpages
+                </li>
+                <li class="flex gap-3 items-center">
+                  <span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Priority Support
+                </li>
+              </ul>
+              <a
+                class="w-full block text-center py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase hover:bg-tertiary/10"
+                href="https://forms.gle/EqWWU8xf4Rw3Wosx9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Inquire</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / Start Your Project -->
+      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="contact">
+        <div class="bg-surface-container-high p-12 md:p-24 relative overflow-hidden text-center">
+          <div class="relative z-10">
+            <h2 class="font-headline-lg text-headline-lg mb-8">Ready to define your digital footprint?</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
+              Let's build something that doesn't just function—it commands. Book your discovery call today.
+            </p>
+            <a
+              class="inline-block px-12 py-5 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:scale-105 transition-all"
+              href="https://cal.com/theragasudha-info-amnqo1/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Schedule Discovery Call</a
+            >
+          </div>
+          <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-section-gap bg-surface-container-lowest reveal">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="grid md:grid-cols-3 gap-16">
+            <div class="space-y-6 italic">
+              <span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
+              <p class="font-body-lg text-body-lg leading-relaxed">
+                "Raga Sudha completely transformed our online presence. The level of detail and editorial precision is something we couldn't find in
+                larger agencies."
+              </p>
+              <div class="pt-6">
+                <h5 class="font-label-caps text-label-caps uppercase">Sarah J.</h5>
+                <p class="text-xs text-on-surface-variant uppercase mt-1">Founder, Aurelius</p>
+              </div>
+            </div>
+            <div class="space-y-6 italic">
+              <span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
+              <p class="font-body-lg text-body-lg leading-relaxed">
+                "Working with Raga was seamless. She understood our vision immediately and delivered a product that felt bespoke to our high-end brand."
+              </p>
+              <div class="pt-6">
+                <h5 class="font-label-caps text-label-caps uppercase">Marcus Thorne</h5>
+                <p class="text-xs text-on-surface-variant uppercase mt-1">CEO, Applied Accounting</p>
+              </div>
+            </div>
+            <div class="space-y-6 italic">
+              <span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
+              <p class="font-body-lg text-body-lg leading-relaxed">
+                "The no-code build is so fast and easy to manage. It's the perfect combination of professional design and practical utility."
+              </p>
+              <div class="pt-6">
+                <h5 class="font-label-caps text-label-caps uppercase">Elena Russo</h5>
+                <p class="text-xs text-on-surface-variant uppercase mt-1">Founder, Aarya Coaching</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto reveal">
+        <h2 class="font-headline-lg text-headline-lg mb-16 text-center">Frequently Asked</h2>
+        <div class="space-y-6">
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">How long does a project usually take?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              Most full website projects take around 4–8 weeks, depending on scope and how quickly content and feedback are provided. Single landing pages
+              can often be completed faster.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">What exactly is no‑code development?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              No‑code means I use modern visual platforms to design and build your site instead of traditional hand‑coding. You still get a high‑quality,
+              custom website—but without needing a developer for every small change.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">Do you handle branding and visuals as well?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              I provide art direction, layout, and on‑site visual identity for every project. If you already have a brand, I’ll work within it. If not,
+              I’ll help shape a clear, consistent look and feel for your website.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">Why do you focus on static websites?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              Static marketing sites are fast, secure, and easy to host. They’re ideal for serious brands that want a premium presence without the
+              maintenance, plugin issues, and security risks of heavy CMS setups.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">Will I be able to edit the site myself?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              Yes. I build with user‑friendly tools so you can update text and images on your own. For larger structural changes or new pages, you can
+              always bring me back in as needed.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">Do you work with clients outside India?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              Yes. I work with clients in India and internationally. My process is built for remote collaboration using calls, Loom videos, and clear
+              feedback rounds across time zones.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">Are ecommerce websites included in these packages?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              The packages on this page are for static and marketing websites only. If you need ecommerce or a more complex system, we can discuss it on a
+              discovery call and I’ll quote it separately.
+            </p>
+          </details>
+          <details class="group border-b border-outline-variant/10 pb-6">
+            <summary class="flex justify-between items-center cursor-pointer list-none">
+              <h4 class="font-headline-md text-headline-md text-xl">What happens after I book a discovery call?</h4>
+              <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <p class="mt-4 text-on-surface-variant font-body-md">
+              On the call, we’ll look at your current situation, your goals for the website, and your budget and timeline. If we’re a good fit, I’ll outline
+              a clear next step and a package that makes sense for you.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest py-20 border-t border-outline-variant/10">
+      <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-gutter mb-20">
+          <span class="font-headline-lg text-headline-lg text-tertiary">Raga Sudha</span>
+          <div class="flex gap-8">
+            <a
+              class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+              href="https://www.instagram.com/websitebyraga/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+            <a
+              class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+              href="https://www.linkedin.com/in/ragasudhawebdesigner/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+              href="mailto:connectwithragasudha@gmail.com"
+              >Email</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/5">
+          <p class="text-on-surface-variant text-xs mb-4 md:mb-0">© 2026 Raga Sudha. All Rights Reserved.</p>
+          <div class="flex gap-6 text-xs text-on-surface-variant">
+            <a class="hover:text-tertiary" href="#">Privacy Policy</a>
+            <a class="hover:text-tertiary" href="#">Terms of Service</a>
           </div>
         </div>
       </div>
-    </section>
-<!-- I Take Your Project Seriously -->
-<section class="py-section-gap bg-surface-container-lowest reveal">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-<span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Commitment</span>
-<h2 class="font-headline-lg text-headline-lg mb-8 max-w-3xl mx-auto">I Take Your Project Seriously</h2>
-<div class="w-24 h-px bg-tertiary mx-auto mb-12"></div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Professionalism isn't just a buzzword; it's the foundation of my practice. I don't just deliver files; I architect solutions. When we work together, you're not getting a freelancer—you're getting a dedicated partner who values your time, your vision, and the premium standards your brand deserves.</p>
-</div>
-</section>
-<!-- Why Me vs Big Agencies -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
-<div class="grid md:grid-cols-2 gap-20 items-center">
-<div>
-<h2 class="font-headline-lg text-headline-lg mb-8">Boutique Dedication vs Agency Overhead</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Agencies often hide behind layers of project managers and account executives. With me, you get the person actually doing the work. You get agility, direct communication, and a level of attention that no corporate agency can match.</p>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="p-8 bg-surface-container-low border border-outline-variant/10">
-<h4 class="font-headline-md text-headline-md text-tertiary mb-2">Direct</h4>
-<p class="font-label-caps text-label-caps uppercase opacity-60">Communication</p>
-</div>
-<div class="p-8 bg-surface-container-low border border-outline-variant/10">
-<h4 class="font-headline-md text-headline-md text-tertiary mb-2">Bespoke</h4>
-<p class="font-label-caps text-label-caps uppercase opacity-60">Handcrafted</p>
-</div>
-<div class="p-8 bg-surface-container-low border border-outline-variant/10">
-<h4 class="font-headline-md text-headline-md text-tertiary mb-2">Focused</h4>
-<p class="font-label-caps text-label-caps uppercase opacity-60">Single Point</p>
-</div>
-<div class="p-8 bg-surface-container-low border border-outline-variant/10">
-<h4 class="font-headline-md text-headline-md text-tertiary mb-2">Elite</h4>
-<p class="font-label-caps text-label-caps uppercase opacity-60">Finishing</p>
-</div>
-</div>
-</div>
-</section>
-<!-- What Makes Me Different -->
-<section class="py-section-gap bg-surface-container-lowest reveal">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid md:grid-cols-2 gap-gutter items-center">
-<div class="relative aspect-[4/5] hidden md:block">
-<img alt="Creative Studio Environment" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTr56mgo38NgpeV_5W-cl0C7jIymEY38kfg4E-CEHdCy-W3lCW33AzSn8-MsJ0tYxwJJ5XiM04aLiItyCW1msYDrB64koD6ss3ny54CAIhUbTBnna0dE0-2i4v1saOITPcVNVp_kq-OxI-uxoAQCXw2Jl237BBnhClCzPqoBkx1oi8ZSfVmUYuNQtr9nwFPAOGwC1btPqbXQJq2hUF0w0UuG-Wa16t33LLHpw0SKIFAwXDtyHHxrIvMSr403FTrAjn3qzWC_9LpjJr"/>
-<div class="absolute -bottom-10 -right-10 p-10 bg-background border border-tertiary/20">
-<span class="font-display-lg text-display-lg text-tertiary">5</span>
-<p class="font-label-caps text-label-caps uppercase">Pillars of Excellence</p>
-</div>
-</div>
-<div class="space-y-12">
-<h2 class="font-headline-lg text-headline-lg">What Makes Me Different</h2>
-<div class="space-y-8">
-<div class="flex gap-6 group">
-<span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">01</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Bespoke design</h4>
-<p class="text-on-surface-variant">Every pixel is placed with intent. No templates, no shortcuts.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">02</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">No-code build</h4>
-<p class="text-on-surface-variant">Lightning-fast performance and client-friendly management using Webflow and Framer.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">03</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Structured for clarity</h4>
-<p class="text-on-surface-variant">A logical flow that guides users effortlessly through your brand story.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">04</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Premium visuals</h4>
-<p class="text-on-surface-variant">Editorial-grade typography and carefully curated art direction.</p>
-</div>
-</div>
-<div class="flex gap-6 group">
-<span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">05</span>
-<div>
-<h4 class="font-headline-md text-headline-md mb-2">Smooth process</h4>
-<p class="text-on-surface-variant">Crystal clear timelines and a frictionless onboarding experience.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Services -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="services">
-<div class="text-center mb-24">
-<span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Expertise</span>
-<h2 class="font-headline-lg text-headline-lg">Elevated Digital Services</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-12">
-<div class="p-12 border border-outline-variant/10 hover-glow transition-all duration-500">
-<span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="brush">brush</span>
-<h3 class="font-headline-md text-headline-md mb-6">Custom Design</h3>
-<p class="text-on-surface-variant">Strategic visual identities and user interfaces that resonate with high-end audiences.</p>
-</div>
-<div class="p-12 bg-surface-container-high border border-tertiary/20 hover-glow transition-all duration-500">
-<span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="terminal">terminal</span>
-<h3 class="font-headline-md text-headline-md mb-6">No-code Development</h3>
-<p class="text-on-surface-variant">Developing responsive, high-performance websites without the traditional code overhead.</p>
-</div>
-<div class="p-12 border border-outline-variant/10 hover-glow transition-all duration-500">
-<span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="refresh">refresh</span>
-<h3 class="font-headline-md text-headline-md mb-6">Redesigns</h3>
-<p class="text-on-surface-variant">Transforming legacy sites into modern editorial powerhouses that drive growth.</p>
-</div>
-</div>
-</section>
-<!-- Process -->
-<section class="py-section-gap bg-surface-container-lowest reveal overflow-hidden" id="process">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<h2 class="font-headline-lg text-headline-lg mb-20">The Methodical Path to Success</h2>
-<div class="grid md:grid-cols-4 gap-12">
-<div class="process-step" data-step="1">
-<div class="relative w-20 h-20 mb-8 flex items-center justify-center">
-<svg class="absolute inset-0 w-full h-full -rotate-90">
-<circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
-<circle class="text-tertiary transition-all duration-1000 scroll-indicator-circle" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238" stroke-dashoffset="238" stroke-width="2"></circle>
-</svg>
-<span class="font-headline-md text-headline-md text-tertiary">1</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4">Discovery</h4>
-<p class="text-on-surface-variant">Uncovering your brand's unique DNA and market position.</p>
-</div>
-<div class="process-step" data-step="2">
-<div class="relative w-20 h-20 mb-8 flex items-center justify-center">
-<svg class="absolute inset-0 w-full h-full -rotate-90">
-<circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
-<circle class="text-tertiary transition-all duration-1000 scroll-indicator-circle" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238" stroke-dashoffset="119" stroke-width="2"></circle>
-</svg>
-<span class="font-headline-md text-headline-md text-tertiary">2</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4">Direction</h4>
-<p class="text-on-surface-variant">Establishing the aesthetic moodboard and user journey maps.</p>
-</div>
-<div class="process-step" data-step="3">
-<div class="relative w-20 h-20 mb-8 flex items-center justify-center">
-<svg class="absolute inset-0 w-full h-full -rotate-90">
-<circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
-<circle class="text-tertiary transition-all duration-1000 scroll-indicator-circle" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238" stroke-dashoffset="60" stroke-width="2"></circle>
-</svg>
-<span class="font-headline-md text-headline-md text-tertiary">3</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4">Design &amp; Build</h4>
-<p class="text-on-surface-variant">The iterative process of crafting and developing your site.</p>
-</div>
-<div class="process-step" data-step="4">
-<div class="relative w-20 h-20 mb-8 flex items-center justify-center">
-<svg class="absolute inset-0 w-full h-full -rotate-90">
-<circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
-<circle class="text-tertiary transition-all duration-1000 scroll-indicator-circle" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-dasharray="238" stroke-dashoffset="0" stroke-width="2"></circle>
-</svg>
-<span class="font-headline-md text-headline-md text-tertiary">4</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4">Launch &amp; Support</h4>
-<p class="text-on-surface-variant">Smooth deployment and long-term maintenance assurance.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Selected Work -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="work">
-  <div class="flex justify-between items-end mb-24">
-    <div>
-      <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Archive</span>
-      <h2 class="font-headline-lg text-headline-lg">Selected Work</h2>
-    </div>
-    <a class="hidden md:block font-label-caps text-label-caps uppercase border-b border-tertiary pb-2 hover:opacity-70 transition-all" href="#">Explore all projects</a>
-  </div>
+    </footer>
 
-  <div class="grid gap-40">
-    <!-- Project 01: Aarya Coaching -->
-    <div class="grid md:grid-cols-12 gap-10 items-center group">
-      <div class="md:col-span-7 aspect-video overflow-hidden">
-        <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105 relative">
-          <img
-            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnOLGlxcVR9loOja85FsRXN_pf1vFZh1IF9PQ-u7yVue5t9pF7p5l2xj_drfqhLmxCVv3WatMZWtSrCyypAwST-vwAgMBVbWIuEfL7LKkATJVC3lvJJr6AxvQv7Fk2GujYdIjbYtIL5QwX1ktvquQFeoGibZh6UhA7KUZNYTQohWov2L3OSo93uvGKYxeo06D4tpwxJ8uN0YsgOqgUoH09mlvDhksbxS8-7JLicEQgeOjYTFcecb_MML7CJ0Sa2Qa3CuhtGn24-OVn"
-            alt="A luxurious minimalist website mockup for Aarya Coaching, featuring elegant serif typography and an ivory and charcoal color palette on a sleek laptop display."
-          />
-        </div>
-      </div>
-      <div class="md:col-span-5 md:pl-10">
-        <span class="font-label-caps text-label-caps text-tertiary mb-4 block">01 / BRANDING &amp; WEB</span>
-        <h3 class="font-headline-lg text-headline-lg mb-6">Aarya Coaching</h3>
-        <p class="text-on-surface-variant mb-10">
-          An elite performance coaching platform focused on high-net-worth executives and entrepreneurs.
-        </p>
-        <a
-          class="inline-flex items-center gap-4 font-label-caps text-label-caps uppercase group"
-          href="https://ragasudhagit.github.io/Aaryacoaching/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Case Study
-          <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
-        </a>
-      </div>
-    </div>
-    <!-- Project 02: Aurelius -->
-    <div class="grid md:grid-cols-12 gap-10 items-center group">
-      <div class="md:col-span-5 md:order-1 order-2 md:pr-10">
-        <span class="font-label-caps text-label-caps text-tertiary mb-4 block">02 / E-COMMERCE</span>
-        <h3 class="font-headline-lg text-headline-lg mb-6">Aurelius</h3>
-        <p class="text-on-surface-variant mb-10">
-          A bespoke watch boutique requiring a digital experience as precise and timeless as their products.
-        </p>
-        <a
-          class="inline-flex items-center gap-4 font-label-caps text-label-caps uppercase group"
-          href="https://ragasudhagit.github.io/aurelius/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Case Study
-          <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
-        </a>
-      </div>
-      <div class="md:col-span-7 md:order-2 order-1 aspect-video overflow-hidden">
-        <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105">
-          <img
-            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqhqUHIzolR0hY8ptdX1B0psijV9pC8wVUYwPpSN4NkpJIDssrPoAW0EUOaI7asksmto5aOgmBsGV_gnRkYL58NO0VGZX8TCl1X9YSsPyo8oUYVPmYFRnXplupLlnb5qiesrfYlyDQe6PP21TzlRglgku-8aZVz303sHOz0qyBWl1eIWv3eRcQVWKM47tSsQ17pHZ8sZsWl1xMV-MJeQkoJ2ro2fkkRalVflyfz0lPCGvqcdl9vsPQ5ZM7dJkUsMswP2QdO9A1pYNe"
-            alt="A sophisticated e-commerce interface mockup for Aurelius watches, displaying a high-resolution photograph of a luxury timepiece surrounded by clean layouts and gold accents."
-          />
-        </div>
-      </div>
-    </div>
-    <!-- Project 03: Applied Accounting -->
-    <div class="grid md:grid-cols-12 gap-10 items-center group">
-      <div class="md:col-span-7 aspect-video overflow-hidden">
-        <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105">
-          <img
-            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3VTwm5XaS2zTJUyd7sMiwTc8TrMRF9N5bJ4QOMwjIRs0JqQSQctvQWw-7u8qQXZxWEnyzQeQv3_pFILovkf2FQMFznxE57s13soGzIUlW3QMntKdz23uOV9PMA6lGUBUUw-XMIZ2jlffnI4aw4iVrNyZ5BtUiHWwCwIY-UtS9bsR8I931lmWgpmKtrNDdl_fx5ifJhYe4Af3fJC3ECzF52S3tHMYIL_V7zpFp6eSTwaL2hvVmBhB0bq2YNCE8At2llpK44VeVelzf"
-            alt="A professional dashboard design for Applied Accounting, with clean data visualizations and minimalist charts."
-          />
-        </div>
-      </div>
-      <div class="md:col-span-5 md:pl-10">
-        <span class="font-label-caps text-label-caps text-tertiary mb-4 block">03 / SAAS</span>
-        <h3 class="font-headline-lg text-headline-lg mb-6">Applied Accounting</h3>
-        <p class="text-on-surface-variant mb-10">
-          Modernizing the digital presence of a top-tier accounting firm through clean, data-driven design.
-        </p>
-        <a
-          class="inline-flex items-center gap-4 font-label-caps text-label-caps uppercase group"
-          href="https://ragasudhagit.github.io/applied-accounting-solutions/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Case Study
-          <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Pricing -->
-<section class="py-section-gap bg-surface-container-lowest reveal" id="pricing">
-  <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-    <div class="text-center mb-24">
-      <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Investment</span>
-      <h2 class="font-headline-lg text-headline-lg">Transparent Tiered Solutions</h2>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Landing Page -->
-      <div class="p-10 border border-outline-variant/10 bg-background hover-glow transition-all">
-        <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Standard</h4>
-        <h3 class="font-headline-md text-headline-md mb-8">Landing Page</h3>
-        <div class="mb-10">
-          <span class="text-4xl font-bold font-headline-md">From $299</span>
-          <p class="text-on-surface-variant text-sm mt-2">≈ ₹24,499+ INR</p>
-        </div>
-        <ul class="space-y-4 mb-12 text-on-surface-variant">
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Single High-Conversion Page</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Mobile Responsive</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> 1-Week Delivery</li>
-        </ul>
-        <a class="w-full block text-center py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase hover:bg-tertiary/10" href="https://forms.gle/EqWWU8xf4Rw3Wosx9" target="_blank" rel="noopener noreferrer">Get Started</a>
-      </div>
-      <!-- 5-Page -->
-      <div class="p-10 border-2 border-tertiary bg-surface-container-high relative scale-105 z-10 shadow-2xl">
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-tertiary text-on-tertiary px-4 py-1 font-label-caps text-[10px] uppercase tracking-widest">Most Chosen</div>
-        <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Business</h4>
-        <h3 class="font-headline-md text-headline-md mb-8">5-Page Website</h3>
-        <div class="mb-10">
-          <span class="text-4xl font-bold font-headline-md">From $599</span>
-          <p class="text-on-surface-variant text-sm mt-2">≈ ₹54,499+ INR</p>
-        </div>
-        <ul class="space-y-4 mb-12 text-on-surface-variant">
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Complete Brand Ecosystem</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> CMS for Blog/Portfolio</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Advanced SEO Setup</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> 3-Week Delivery</li>
-        </ul>
-        <a class="w-full block text-center py-4 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:opacity-90" href="https://forms.gle/EqWWU8xf4Rw3Wosx9" target="_blank" rel="noopener noreferrer">Start Now</a>
-      </div>
-      <!-- Custom -->
-      <div class="p-10 border border-outline-variant/10 bg-background hover-glow transition-all">
-        <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Enterprise</h4>
-        <h3 class="font-headline-md text-headline-md mb-8">Custom Solution</h3>
-        <div class="mb-10">
-          <span class="text-4xl font-bold font-headline-md">From $1000</span>
-          <p class="text-on-surface-variant text-sm mt-2">≈ ₹98,999+ INR</p>
-        </div>
-        <ul class="space-y-4 mb-12 text-on-surface-variant">
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Complex Interactions</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Unlimited Subpages</li>
-          <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Priority Support</li>
-        </ul>
-        <a class="w-full block text-center py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase hover:bg-tertiary/10" href="https://forms.gle/EqWWU8xf4Rw3Wosx9" target="_blank" rel="noopener noreferrer">Inquire</a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- CTA / Start Your Project -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="contact">
-  <div class="bg-surface-container-high p-12 md:p-24 relative overflow-hidden text-center">
-    <div class="relative z-10">
-      <h2 class="font-headline-lg text-headline-lg mb-8">Ready to define your digital footprint?</h2>
-      <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">Let's build something that doesn't just function—it commands. Book your discovery call today.</p>
-      <a class="inline-block px-12 py-5 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:scale-105 transition-all" href="https://cal.com/theragasudha-info-amnqo1/30min" target="_blank" rel="noopener noreferrer">Schedule Discovery Call</a>
-    </div>
-    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
-  </div>
-</section>
-<!-- Testimonials -->
-<section class="py-section-gap bg-surface-container-lowest reveal">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid md:grid-cols-3 gap-16">
-<div class="space-y-6 italic">
-<span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
-<p class="font-body-lg text-body-lg leading-relaxed">"Raga Sudha completely transformed our online presence. The level of detail and editorial precision is something we couldn't find in larger agencies."</p>
-<div class="pt-6">
-<h5 class="font-label-caps text-label-caps uppercase">Sarah J.</h5>
-<p class="text-xs text-on-surface-variant uppercase mt-1">Founder, Aurelius</p>
-</div>
-</div>
-<div class="space-y-6 italic">
-<span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
-<p class="font-body-lg text-body-lg leading-relaxed">"Working with Raga was seamless. She understood our vision immediately and delivered a product that felt bespoke to our high-end brand."</p>
-<div class="pt-6">
-<h5 class="font-label-caps text-label-caps uppercase">Marcus Thorne</h5>
-<p class="text-xs text-on-surface-variant uppercase mt-1">CEO, Applied Accounting</p>
-</div>
-</div>
-<div class="space-y-6 italic">
-<span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
-<p class="font-body-lg text-body-lg leading-relaxed">"The no-code build is so fast and easy to manage. It's the perfect combination of professional design and practical utility."</p>
-<div class="pt-6">
-<h5 class="font-label-caps text-label-caps uppercase">Elena Russo</h5>
-<p class="text-xs text-on-surface-variant uppercase mt-1">Founder, Aarya Coaching</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto reveal">
-  <h2 class="font-headline-lg text-headline-lg mb-16 text-center">Frequently Asked</h2>
-  <div class="space-y-6">
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">How long does a project usually take?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        Most full website projects take around 4–8 weeks, depending on scope and how quickly content and feedback are provided. Single landing pages can often be completed faster.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">What exactly is no‑code development?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        No‑code means I use modern visual platforms to design and build your site instead of traditional hand‑coding. You still get a high‑quality, custom website—but without needing a developer for every small change.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">Do you handle branding and visuals as well?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        I provide art direction, layout, and on‑site visual identity for every project. If you already have a brand, I’ll work within it. If not, I’ll help shape a clear, consistent look and feel for your website.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">Why do you focus on static websites?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        Static marketing sites are fast, secure, and easy to host. They’re ideal for serious brands that want a premium presence without the maintenance, plugin issues, and security risks of heavy CMS setups.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">Will I be able to edit the site myself?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        Yes. I build with user‑friendly tools so you can update text and images on your own. For larger structural changes or new pages, you can always bring me back in as needed.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">Do you work with clients outside India?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        Yes. I work with clients in India and internationally. My process is built for remote collaboration using calls, Loom videos, and clear feedback rounds across time zones.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">Are ecommerce websites included in these packages?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        The packages on this page are for static and marketing websites only. If you need ecommerce or a more complex system, we can discuss it on a discovery call and I’ll quote it separately.
-      </p>
-    </details>
-    <details class="group border-b border-outline-variant/10 pb-6">
-      <summary class="flex justify-between items-center cursor-pointer list-none">
-        <h4 class="font-headline-md text-headline-md text-xl">What happens after I book a discovery call?</h4>
-        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-      </summary>
-      <p class="mt-4 text-on-surface-variant font-body-md">
-        On the call, we’ll look at your current situation, your goals for the website, and your budget and timeline. If we’re a good fit, I’ll outline a clear next step and a package that makes sense for you.
-      </p>
-    </details>
-  </div>
-</section>
-<footer class="bg-surface-container-lowest py-20 border-t border-outline-variant/10">
-<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center gap-gutter mb-20">
-<span class="font-headline-lg text-headline-lg text-tertiary">Raga Sudha</span>
-<div class="flex gap-8">
-<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="https://www.instagram.com/websitebyraga/" target="_blank" rel="noopener noreferrer">Instagram</a>
-<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="https://www.linkedin.com/in/ragasudhawebdesigner/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="mailto:connectwithragasudha@gmail.com">Email</a>
-</div>
-</div>
-<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/5">
-<p class="text-on-surface-variant text-xs mb-4 md:mb-0">© 2026 Raga Sudha. All Rights Reserved.</p>
-<div class="flex gap-6 text-xs text-on-surface-variant">
-<a class="hover:text-tertiary" href="#">Privacy Policy</a>
-<a class="hover:text-tertiary" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-</footer>
-<script>
-        // Reveal Animations
-        const observerOptions = {
-            threshold: 0.1
-        };
+    <script>
+      // Reveal Animations
+      const observerOptions = { threshold: 0.1 };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Process Circle Animations
-        const processObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active-circle');
-                }
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.process-step').forEach(el => processObserver.observe(el));
-
-        // Custom Cursor
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
         });
+      }, observerOptions);
 
-        document.querySelectorAll('a, button, details').forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                cursor.style.width = '50px';
-                cursor.style.height = '50px';
-                cursor.style.background = 'rgba(233, 193, 118, 0.1)';
-            });
-            link.addEventListener('mouseleave', () => {
-                cursor.style.width = '20px';
-                cursor.style.height = '20px';
-                cursor.style.background = 'transparent';
-            });
-        });
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+      // Process Circle Animations
+      const processObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active-circle");
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      document.querySelectorAll(".process-step").forEach(el => processObserver.observe(el));
+
+      // Custom Cursor
+      const cursor = document.getElementById("cursor");
+      document.addEventListener("mousemove", e => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      document.querySelectorAll("a, button, details").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+          cursor.style.width = "50px";
+          cursor.style.height = "50px";
+          cursor.style.background = "rgba(233, 193, 118, 0.1)";
         });
+        link.addEventListener("mouseleave", () => {
+          cursor.style.width = "20px";
+          cursor.style.height = "20px";
+          cursor.style.background = "transparent";
+        });
+      });
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(targetId);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+        });
+      });
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenuMobile = document.getElementById("nav-menu-mobile");
+
+      if (navToggle && navMenuMobile) {
+        navToggle.addEventListener("click", () => {
+          navMenuMobile.classList.toggle("hidden");
+        });
+      }
     </script>
-</body></html>
+  </body>
+</html>
