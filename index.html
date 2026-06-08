@@ -103,83 +103,54 @@
     </script>
 
     <style>
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .custom-cursor {
-        width: 20px;
-        height: 20px;
-        border: 1px solid #e9c176;
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
-      }
-      .hover-glow:hover {
-        box-shadow: 0px 4px 20px rgba(233, 193, 118, 0.12);
-      }
-      .scroll-indicator-circle {
-        stroke-dasharray: 100;
-        stroke-dashoffset: 100;
-        transition: stroke-dashoffset 0.5s ease;
-      }
-      .active-circle .scroll-indicator-circle {
-        stroke-dashoffset: 0;
-      }
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #131313;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #444748;
-        border-radius: 10px;
-      }
-      .scroll-circle-inner {
-  transition: transform 0.6s ease-out;
-  transform-origin: center center;
-}
-.scroll-circle-inner.is-active {
-  transform: scale(6);
-}
-      // Scroll circle transition
-const scrollCircleWrapper = document.getElementById("scroll-circle");
-const scrollCircleInner = scrollCircleWrapper?.querySelector(".scroll-circle-inner");
-
-// Sections where we want the circle transition
-const circleSections = document.querySelectorAll("#services, #process, #work, #pricing");
-
-if (scrollCircleInner && circleSections.length > 0) {
-  const circleObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Activate circle
-          scrollCircleInner.classList.add("is-active");
-
-          // Deactivate after animation
-          setTimeout(() => {
-            scrollCircleInner.classList.remove("is-active");
-          }, 650); // slightly more than CSS transition
-        }
-      });
-    },
-    {
-      threshold: 0.35
-    }
-  );
-
-  circleSections.forEach(section => circleObserver.observe(section));
-}
-    </style>
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e9c176;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
+  }
+  .hover-glow:hover {
+    box-shadow: 0px 4px 20px rgba(233, 193, 118, 0.12);
+  }
+  .scroll-indicator-circle {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+  .active-circle .scroll-indicator-circle {
+    stroke-dashoffset: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #131313;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444748;
+    border-radius: 10px;
+  }
+  .scroll-circle-inner {
+    transition: transform 0.6s ease-out;
+    transform-origin: center center;
+  }
+  .scroll-circle-inner.is-active {
+    transform: scale(6);
+  }
+</style>
   </head>
 
   <body class="bg-background text-on-background font-body-md selection:bg-tertiary selection:text-on-tertiary overflow-x-hidden">
@@ -890,76 +861,117 @@ if (scrollCircleInner && circleSections.length > 0) {
     </footer>
 
     <script>
-      // Reveal Animations
-      const observerOptions = { threshold: 0.1 };
+  // Reveal Animations
+  const observerOptions = { threshold: 0.1 };
 
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-      // Process Circle Animations
-      const processObserver = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("active-circle");
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-
-      document.querySelectorAll(".process-step").forEach(el => processObserver.observe(el));
-
-      // Custom Cursor
-      const cursor = document.getElementById("cursor");
-      document.addEventListener("mousemove", e => {
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
-      });
-
-      document.querySelectorAll("a, button, details").forEach(link => {
-        link.addEventListener("mouseenter", () => {
-          cursor.style.width = "50px";
-          cursor.style.height = "50px";
-          cursor.style.background = "rgba(233, 193, 118, 0.1)";
-        });
-        link.addEventListener("mouseleave", () => {
-          cursor.style.width = "20px";
-          cursor.style.height = "20px";
-          cursor.style.background = "transparent";
-        });
-      });
-
-      // Smooth Scroll
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-          const targetId = this.getAttribute("href");
-          if (targetId.length > 1) {
-            e.preventDefault();
-            const target = document.querySelector(targetId);
-            if (target) {
-              target.scrollIntoView({ behavior: "smooth" });
-            }
-          }
-        });
-      });
-
-      // Mobile nav toggle
-      const navToggle = document.getElementById("nav-toggle");
-      const navMenuMobile = document.getElementById("nav-menu-mobile");
-
-      if (navToggle && navMenuMobile) {
-        navToggle.addEventListener("click", () => {
-          navMenuMobile.classList.toggle("hidden");
-        });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
       }
-    </script>
+    });
+  }, observerOptions);
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  // Process Circle Animations
+  const processObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active-circle");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  document.querySelectorAll(".process-step").forEach(el => processObserver.observe(el));
+
+  // Custom Cursor
+  const cursor = document.getElementById("cursor");
+  document.addEventListener("mousemove", e => {
+    if (!cursor) return;
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  document.querySelectorAll("a, button, details").forEach(link => {
+    link.addEventListener("mouseenter", () => {
+      if (!cursor) return;
+      cursor.style.width = "50px";
+      cursor.style.height = "50px";
+      cursor.style.background = "rgba(233, 193, 118, 0.1)";
+    });
+    link.addEventListener("mouseleave", () => {
+      if (!cursor) return;
+      cursor.style.width = "20px";
+      cursor.style.height = "20px";
+      cursor.style.background = "transparent";
+    });
+  });
+
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      if (targetId && targetId.length > 1) {
+        e.preventDefault();
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const navMenuMobile = document.getElementById("nav-menu-mobile");
+
+  if (navToggle && navMenuMobile) {
+    navToggle.addEventListener("click", () => {
+      navMenuMobile.classList.toggle("hidden");
+    });
+  }
+
+  // Scroll circle transition
+  const scrollCircleWrapper = document.getElementById("scroll-circle");
+  const scrollCircleInner = scrollCircleWrapper?.querySelector(".scroll-circle-inner");
+
+  const circleSections = document.querySelectorAll("#services, #process, #work, #pricing, #contact");
+
+  if (scrollCircleInner && circleSections.length > 0) {
+    let lastTriggeredSection = null;
+
+    const circleObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+            const id = entry.target.id || "";
+            if (lastTriggeredSection !== id) {
+              lastTriggeredSection = id;
+              scrollCircleInner.classList.add("is-active");
+              setTimeout(() => {
+                scrollCircleInner.classList.remove("is-active");
+              }, 650);
+            }
+          }
+        });
+      },
+      {
+        threshold: [0.3, 0.5, 0.7]
+      }
+    );
+
+    circleSections.forEach(section => circleObserver.observe(section));
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < 100) {
+        lastTriggeredSection = null;
+      }
+    });
+  }
+</script>
   </body>
 </html>
