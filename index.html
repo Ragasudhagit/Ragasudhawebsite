@@ -143,11 +143,51 @@
         background: #444748;
         border-radius: 10px;
       }
+      .scroll-circle-inner {
+  transition: transform 0.6s ease-out;
+  transform-origin: center center;
+}
+.scroll-circle-inner.is-active {
+  transform: scale(6);
+}
+      // Scroll circle transition
+const scrollCircleWrapper = document.getElementById("scroll-circle");
+const scrollCircleInner = scrollCircleWrapper?.querySelector(".scroll-circle-inner");
+
+// Sections where we want the circle transition
+const circleSections = document.querySelectorAll("#services, #process, #work, #pricing");
+
+if (scrollCircleInner && circleSections.length > 0) {
+  const circleObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Activate circle
+          scrollCircleInner.classList.add("is-active");
+
+          // Deactivate after animation
+          setTimeout(() => {
+            scrollCircleInner.classList.remove("is-active");
+          }, 650); // slightly more than CSS transition
+        }
+      });
+    },
+    {
+      threshold: 0.35
+    }
+  );
+
+  circleSections.forEach(section => circleObserver.observe(section));
+}
     </style>
   </head>
 
   <body class="bg-background text-on-background font-body-md selection:bg-tertiary selection:text-on-tertiary overflow-x-hidden">
     <div class="custom-cursor hidden md:block" id="cursor"></div>
+    <div id="scroll-circle" class="fixed inset-0 pointer-events-none flex items-center justify-center z-40">
+  <div class="scroll-circle-inner w-40 h-40 md:w-64 md:h-64 rounded-full bg-tertiary" style="transform: scale(0);">
+    </div>
+</div>
 
     <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/20">
