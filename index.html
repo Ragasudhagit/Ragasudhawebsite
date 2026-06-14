@@ -6,8 +6,14 @@
     <title>Raga Sudha | Premium Web Design &amp; No-Code Development</title>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
 
     <script id="tailwind-config">
       tailwind.config = {
@@ -103,56 +109,323 @@
     </script>
 
     <style>
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-  }
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .custom-cursor {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #e9c176;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease, background 0.3s ease;
-  }
-  .hover-glow:hover {
-    box-shadow: 0px 4px 20px rgba(233, 193, 118, 0.12);
-  }
-  .scroll-indicator-circle {
-    stroke-dasharray: 100;
-    stroke-dashoffset: 100;
-    transition: stroke-dashoffset 0.5s ease;
-  }
-  .active-circle .scroll-indicator-circle {
-    stroke-dashoffset: 0;
-  }
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #131313;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #444748;
-    border-radius: 10px;
-  }
-  .scroll-circle-inner {
-    transition: transform 0.6s ease-out;
-    transform-origin: center center;
-  }
-  .scroll-circle-inner.is-active {
-    transform: scale(6);
-  }
-</style>
-  </head>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
+      .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #e9c176;
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition:
+          transform 0.2s ease,
+          width 0.3s ease,
+          height 0.3s ease,
+          background 0.3s ease;
+      }
+
+      .hover-glow:hover {
+        box-shadow: 0px 4px 20px rgba(233, 193, 118, 0.12);
+      }
+
+      .scroll-indicator-circle {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transition: stroke-dashoffset 0.5s ease;
+      }
+      .active-circle .scroll-indicator-circle {
+        stroke-dashoffset: 0;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #131313;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #444748;
+        border-radius: 10px;
+      }
+
+      .scroll-circle-inner {
+        transition: transform 0.6s ease-out;
+        transform-origin: center center;
+      }
+      .scroll-circle-inner.is-active {
+        transform: scale(6);
+      }
+
+      /* Boutique section animations */
+      .animated-block-left,
+      .animated-block-right {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active .animated-block-left {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal.active .animated-block-right {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.18s;
+      }
+      .feature-card {
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+          background 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        background: radial-gradient(
+          circle at top,
+          rgba(233, 193, 118, 0.22),
+          transparent 60%
+        );
+        opacity: 0;
+        transform: translateY(20%);
+        transition:
+          opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+      }
+      .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 18px 45px rgba(0, 0, 0, 0.45),
+          0 0 0 1px rgba(233, 193, 118, 0.3);
+        border-color: rgba(233, 193, 118, 0.5);
+        background:
+          radial-gradient(
+            circle at top,
+            rgba(233, 193, 118, 0.06),
+            transparent 65%
+          ),
+          #1b1c1c;
+      }
+      .feature-card:hover::before {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Flowing line for "What Makes Me Different" */
+      .diff-line-wrapper {
+        position: absolute;
+        inset: 56px auto 0 0;
+        display: flex;
+        justify-content: flex-start;
+        pointer-events: none;
+      }
+      .diff-line-track {
+        position: relative;
+        width: 2px;
+        margin-left: 16px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        background: linear-gradient(
+          to bottom,
+          rgba(68, 71, 72, 0.4),
+          rgba(68, 71, 72, 0.1)
+        );
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      #diff-steps {
+        position: relative;
+      }
+      .diff-line-track::before {
+        content: "";
+        position: absolute;
+        inset: -40px;
+        background: radial-gradient(
+          circle at top,
+          rgba(0, 0, 0, 0.4),
+          transparent 60%
+        );
+        opacity: 0.4;
+        filter: blur(12px);
+      }
+      .diff-line-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: linear-gradient(
+          to bottom,
+          rgba(233, 193, 118, 0.9),
+          rgba(233, 193, 118, 0.1)
+        );
+        box-shadow: 0 0 18px rgba(233, 193, 118, 0.5);
+        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .diff-step-number {
+        position: relative;
+        z-index: 1;
+      }
+      .diff-step.is-active .diff-step-number {
+        opacity: 1;
+        text-shadow: 0 0 14px rgba(233, 193, 118, 0.7);
+      }
+      @media (max-width: 767px) {
+        .diff-line-wrapper {
+          left: 4px;
+        }
+        .diff-line-track {
+          margin-left: 8px;
+        }
+      }
+
+      /* Live frame for Commitment section (light outside box) */
+      .live-frame-inner {
+        padding: 40px 24px;
+        border-radius: 16px;
+        background: #111111;
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      .reveal.active .live-frame-inner {
+        opacity: 1;
+        transform: translateY(0);
+        transition:
+          opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      @media (min-width: 768px) {
+        .live-frame-inner {
+          padding: 56px 64px;
+        }
+      }
+      .live-frame-border {
+        position: absolute;
+        inset: -12px;
+        border-radius: 22px;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .live-frame-border::before {
+        content: "";
+        position: absolute;
+        inset: -140%;
+        border-radius: inherit;
+        background: conic-gradient(
+          from 0deg,
+          transparent 0deg,
+          rgba(233, 193, 118, 0.8) 70deg,
+          transparent 120deg,
+          transparent 360deg
+        );
+        animation: liveFrameSweep 12s linear infinite;
+        opacity: 0.9;
+        mix-blend-mode: screen;
+      }
+      @keyframes liveFrameSweep {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* Extra high-end polish: subtle tilt on cards in Work & Pricing */
+      .tilt-card {
+        transition:
+          transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        transform-origin: center center;
+      }
+      .tilt-card:hover {
+        transform: translateY(-6px) rotate3d(1, -1, 0, 6deg);
+        box-shadow:
+          0 18px 48px rgba(0, 0, 0, 0.45),
+          0 0 0 1px rgba(233, 193, 118, 0.2);
+      }
+
+      /* CTA floating glow */
+      .cta-glow::before {
+        content: "";
+        position: absolute;
+        inset: -40%;
+        background: radial-gradient(
+          circle at center,
+          rgba(233, 193, 118, 0.18),
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.6s ease-out;
+      }
+      .reveal.active .cta-glow::before {
+        opacity: 1;
+      }
+
+      /* Testimonials subtle parallax */
+      .testimonial-card {
+        transition:
+          transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+          background 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .testimonial-card:hover {
+        transform: translateY(-8px);
+        background: radial-gradient(
+            circle at top,
+            rgba(233, 193, 118, 0.12),
+            transparent 65%
+          ),
+          #181818;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .animated-block-left,
+        .animated-block-right,
+        .feature-card,
+        .tilt-card,
+        .cta-glow,
+        .testimonial-card {
+          transition: none;
+          transform: none !important;
+          box-shadow: none !important;
+        }
+        .feature-card::before,
+        .cta-glow::before,
+        .live-frame-border::before {
+          animation: none;
+          transform: none !important;
+          opacity: 0.4;
+        }
+        .diff-line-progress {
+          transition: none;
+        }
+        .diff-step-number {
+          text-shadow: none !important;
+        }
+        .live-frame-inner {
+          opacity: 1;
+          transform: none !important;
+        }
+      }
+    </style>
+  </head>
 
   <body class="bg-background text-on-background font-body-md selection:bg-tertiary selection:text-on-tertiary overflow-x-hidden">
     <div
@@ -166,6 +439,7 @@
     </div>
 
     <div class="custom-cursor hidden md:block" id="cursor"></div>
+
     <!-- NAV -->
     <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/20">
       <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
@@ -173,25 +447,61 @@
 
         <!-- Desktop menu -->
         <div class="hidden md:flex gap-10 items-center">
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#work">Work</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#services">Services</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
-          <a class="px-6 py-3 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity duration-300" href="#contact">Book a Call</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#work"
+          >Work</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#services"
+          >Services</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#process"
+          >Process</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#pricing"
+          >Pricing</a>
+          <a
+            class="px-6 py-3 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:opacity-80 transition-opacity duration-300"
+            href="#contact"
+          >Book a Call</a>
         </div>
 
         <!-- Mobile menu button -->
-        <button id="nav-toggle" class="md:hidden text-on-surface material-symbols-outlined">menu</button>
+        <button
+          id="nav-toggle"
+          class="md:hidden flex items-center gap-2 text-on-surface font-label-caps text-label-caps uppercase tracking-[0.2em]"
+        >
+          <span class="material-symbols-outlined text-xl">menu</span>
+          <span>Menu</span>
+        </button>
       </div>
 
       <!-- Mobile dropdown -->
-     <div id="nav-menu-mobile" class="md:hidden hidden border-t border-outline-variant/20 bg-background">
-  <div class="flex flex-col px-margin-mobile py-4 space-y-3 items-center text-center">
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#work">Work</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#services">Services</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#process">Process</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#pricing">Pricing</a>
-          <a class="font-body-md text-body-md uppercase tracking-widest text-tertiary hover:text-on-surface transition-colors duration-300" href="#contact">Book a Call</a>
+      <div id="nav-menu-mobile" class="md:hidden hidden border-t border-outline-variant/20 bg-background">
+        <div class="flex flex-col px-margin-mobile py-4 space-y-3 items-center text-center">
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#work"
+          >Work</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#services"
+          >Services</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#process"
+          >Process</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300"
+            href="#pricing"
+          >Pricing</a>
+          <a
+            class="font-body-md text-body-md uppercase tracking-widest text-tertiary hover:text-on-surface transition-colors duration-300"
+            href="#contact"
+          >Book a Call</a>
         </div>
       </div>
     </nav>
@@ -199,8 +509,8 @@
     <main class="mt-20">
       <!-- Hero Section -->
       <section class="min-h-[90vh] flex items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-20 reveal">
-        <div class="flex flex-col-reverse md:flex-row items-center gap-gutter">
-          <!-- Text -->
+        <div class="flex flex-col md:flex-row items-center gap-gutter">
+          <!-- Text (first on mobile, left on desktop) -->
           <div class="md:w-1/2">
             <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">
               Get a website that looks premium...
@@ -215,17 +525,19 @@
                 href="https://cal.com/theragasudha-info-amnqo1/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Book a Free 30-Minute Discovery Call</a
               >
+                Book a Free 30-Minute Discovery Call
+              </a>
               <a
                 class="px-8 py-4 border border-tertiary text-tertiary font-label-caps text-label-caps uppercase text-center hover:bg-tertiary/10 transition-all"
                 href="#work"
-                >View My Work</a
               >
+                View My Work
+              </a>
             </div>
           </div>
 
-          <!-- Image -->
+          <!-- Image (second on mobile, right on desktop) -->
           <div class="md:w-1/2 flex justify-center md:justify-end">
             <div class="relative w-full max-w-[450px] aspect-[4/5] grayscale hover:grayscale-0 transition-all duration-700">
               <img
@@ -239,44 +551,53 @@
         </div>
       </section>
 
-      <!-- I Take Your Project Seriously -->
+      <!-- Commitment Section with moving light outside box -->
       <section class="py-section-gap bg-surface-container-lowest reveal">
-        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-          <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">Commitment</span>
-          <h2 class="font-headline-lg text-headline-lg mb-8 max-w-3xl mx-auto">I Take Your Project Seriously</h2>
-          <div class="w-24 h-px bg-tertiary mx-auto mb-12"></div>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            Professionalism isn't just a buzzword; it's the foundation of my practice. I don't just deliver files; I architect solutions. When we work
-            together, you're not getting a freelancer—you're getting a dedicated partner who values your time, your vision, and the premium standards
-            your brand deserves.
-          </p>
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="relative max-w-3xl mx-auto">
+            <div class="live-frame-border"></div>
+            <div class="text-center live-frame-inner">
+              <span class="font-label-caps text-label-caps text-tertiary tracking-[0.3em] uppercase block mb-6">
+                Commitment
+              </span>
+              <h2 class="font-headline-lg text-headline-lg mb-8">
+                I Take Your Project Seriously
+              </h2>
+              <div class="w-24 h-px bg-tertiary mx-auto mb-12"></div>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Professionalism isn't just a buzzword; it's the foundation of my practice. I don't just deliver files; I architect solutions. When we work
+                together, you're not getting a freelancer—you're getting a dedicated partner who values your time, your vision, and the premium standards
+                your brand deserves.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Why Me vs Big Agencies -->
+      <!-- Boutique Dedication vs Agency Overhead -->
       <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal">
         <div class="grid md:grid-cols-2 gap-20 items-center">
-          <div>
+          <div class="group/left animated-block-left">
             <h2 class="font-headline-lg text-headline-lg mb-8">Boutique Dedication vs Agency Overhead</h2>
             <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
               Agencies often hide behind layers of project managers and account executives. With me, you get the person actually doing the work. You get
               agility, direct communication, and a level of attention that no corporate agency can match.
             </p>
           </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+          <div class="grid grid-cols-2 gap-4 animated-block-right">
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10 feature-card">
               <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Direct</h4>
               <p class="font-label-caps text-label-caps uppercase opacity-60">Communication</p>
             </div>
-            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10 feature-card">
               <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Bespoke</h4>
               <p class="font-label-caps text-label-caps uppercase opacity-60">Handcrafted</p>
             </div>
-            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10 feature-card">
               <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Focused</h4>
               <p class="font-label-caps text-label-caps uppercase opacity-60">Single Point</p>
             </div>
-            <div class="p-8 bg-surface-container-low border border-outline-variant/10">
+            <div class="p-8 bg-surface-container-low border border-outline-variant/10 feature-card">
               <h4 class="font-headline-md text-headline-md text-tertiary mb-2">Elite</h4>
               <p class="font-label-caps text-label-caps uppercase opacity-60">Finishing</p>
             </div>
@@ -284,7 +605,7 @@
         </div>
       </section>
 
-      <!-- What Makes Me Different -->
+      <!-- What Makes Me Different with flowing line -->
       <section class="py-section-gap bg-surface-container-lowest reveal">
         <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
           <div class="grid md:grid-cols-2 gap-gutter items-center">
@@ -299,18 +620,32 @@
                 <p class="font-label-caps text-label-caps uppercase">Pillars of Excellence</p>
               </div>
             </div>
-            <div class="space-y-12">
+            <div class="space-y-12 relative">
               <h2 class="font-headline-lg text-headline-lg">What Makes Me Different</h2>
-              <div class="space-y-8">
-                <div class="flex gap-6 group">
-                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">01</span>
+
+              <div class="diff-line-wrapper">
+                <div class="diff-line-track">
+                  <div class="diff-line-progress" id="diff-line-progress"></div>
+                </div>
+              </div>
+
+              <div class="space-y-8 relative" id="diff-steps">
+                <div class="flex gap-6 group diff-step" data-step="1">
+                  <span class="diff-step-number text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">
+                    01
+                  </span>
                   <div>
                     <h4 class="font-headline-md text-headline-md mb-2">Bespoke design</h4>
-                    <p class="text-on-surface-variant">Every pixel is placed with intent. No templates, no shortcuts.</p>
+                    <p class="text-on-surface-variant">
+                      Every pixel is placed with intent. No templates, no shortcuts.
+                    </p>
                   </div>
                 </div>
-                <div class="flex gap-6 group">
-                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">02</span>
+
+                <div class="flex gap-6 group diff-step" data-step="2">
+                  <span class="diff-step-number text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">
+                    02
+                  </span>
                   <div>
                     <h4 class="font-headline-md text-headline-md mb-2">No-code build</h4>
                     <p class="text-on-surface-variant">
@@ -318,8 +653,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-6 group">
-                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">03</span>
+
+                <div class="flex gap-6 group diff-step" data-step="3">
+                  <span class="diff-step-number text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">
+                    03
+                  </span>
                   <div>
                     <h4 class="font-headline-md text-headline-md mb-2">Structured for clarity</h4>
                     <p class="text-on-surface-variant">
@@ -327,8 +665,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-6 group">
-                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">04</span>
+
+                <div class="flex gap-6 group diff-step" data-step="4">
+                  <span class="diff-step-number text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">
+                    04
+                  </span>
                   <div>
                     <h4 class="font-headline-md text-headline-md mb-2">Premium visuals</h4>
                     <p class="text-on-surface-variant">
@@ -336,8 +677,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="flex gap-6 group">
-                  <span class="text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">05</span>
+
+                <div class="flex gap-6 group diff-step" data-step="5">
+                  <span class="diff-step-number text-tertiary font-bold font-headline-md text-headline-md opacity-30 group-hover:opacity-100 transition-opacity">
+                    05
+                  </span>
                   <div>
                     <h4 class="font-headline-md text-headline-md mb-2">Smooth process</h4>
                     <p class="text-on-surface-variant">
@@ -358,21 +702,21 @@
           <h2 class="font-headline-lg text-headline-lg">Elevated Digital Services</h2>
         </div>
         <div class="grid md:grid-cols-3 gap-12">
-          <div class="p-12 border border-outline-variant/10 hover-glow transition-all duration-500">
+          <div class="p-12 border border-outline-variant/10 bg-surface-container tilt-card hover-glow transition-all duration-500">
             <span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="brush">brush</span>
             <h3 class="font-headline-md text-headline-md mb-6">Custom Design</h3>
             <p class="text-on-surface-variant">
               Strategic visual identities and user interfaces that resonate with high-end audiences.
             </p>
           </div>
-          <div class="p-12 bg-surface-container-high border border-tertiary/20 hover-glow transition-all duration-500">
+          <div class="p-12 bg-surface-container-high border border-tertiary/20 tilt-card hover-glow transition-all duration-500">
             <span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="terminal">terminal</span>
             <h3 class="font-headline-md text-headline-md mb-6">No-code Development</h3>
             <p class="text-on-surface-variant">
               Developing responsive, high-performance websites without the traditional code overhead.
             </p>
           </div>
-          <div class="p-12 border border-outline-variant/10 hover-glow transition-all duration-500">
+          <div class="p-12 border border-outline-variant/10 bg-surface-container tilt-card hover-glow transition-all duration-500">
             <span class="material-symbols-outlined text-4xl text-tertiary mb-8" data-icon="refresh">refresh</span>
             <h3 class="font-headline-md text-headline-md mb-6">Redesigns</h3>
             <p class="text-on-surface-variant">
@@ -387,7 +731,7 @@
         <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
           <h2 class="font-headline-lg text-headline-lg mb-20">The Methodical Path to Success</h2>
           <div class="grid md:grid-cols-4 gap-12">
-            <div class="process-step" data-step="1">
+            <div class="process-step group" data-step="1">
               <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
                 <svg class="absolute inset-0 w-full h-full -rotate-90">
                   <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
@@ -408,7 +752,7 @@
               <h4 class="font-headline-md text-headline-md mb-4">Discovery</h4>
               <p class="text-on-surface-variant">Uncovering your brand's unique DNA and market position.</p>
             </div>
-            <div class="process-step" data-step="2">
+            <div class="process-step group" data-step="2">
               <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
                 <svg class="absolute inset-0 w-full h-full -rotate-90">
                   <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
@@ -429,7 +773,7 @@
               <h4 class="font-headline-md text-headline-md mb-4">Direction</h4>
               <p class="text-on-surface-variant">Establishing the aesthetic moodboard and user journey maps.</p>
             </div>
-            <div class="process-step" data-step="3">
+            <div class="process-step group" data-step="3">
               <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
                 <svg class="absolute inset-0 w-full h-full -rotate-90">
                   <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
@@ -452,7 +796,7 @@
                 The iterative process of crafting and developing your site.
               </p>
             </div>
-            <div class="process-step" data-step="4">
+            <div class="process-step group" data-step="4">
               <div class="relative w-20 h-20 mb-8 flex items-center justify-center">
                 <svg class="absolute inset-0 w-full h-full -rotate-90">
                   <circle class="text-tertiary/10" cx="40" cy="40" fill="transparent" r="38" stroke="currentColor" stroke-width="2"></circle>
@@ -487,13 +831,14 @@
           <a
             class="hidden md:block font-label-caps text-label-caps uppercase border-b border-tertiary pb-2 hover:opacity-70 transition-all"
             href="#"
-            >Explore all projects</a
           >
+            Explore all projects
+          </a>
         </div>
 
         <div class="grid gap-40">
           <!-- Project 01: Aarya Coaching -->
-          <div class="grid md:grid-cols-12 gap-10 items-center group">
+          <div class="grid md:grid-cols-12 gap-10 items-center group tilt-card">
             <div class="md:col-span-7 aspect-video overflow-hidden">
               <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105 relative">
                 <img
@@ -522,7 +867,7 @@
           </div>
 
           <!-- Project 02: Aurelius -->
-          <div class="grid md:grid-cols-12 gap-10 items-center group">
+          <div class="grid md:grid-cols-12 gap-10 items-center group tilt-card">
             <div class="md:col-span-5 md:order-1 order-2 md:pr-10">
               <span class="font-label-caps text-label-caps text-tertiary mb-4 block">02 / E-COMMERCE</span>
               <h3 class="font-headline-lg text-headline-lg mb-6">Aurelius</h3>
@@ -551,7 +896,7 @@
           </div>
 
           <!-- Project 03: Applied Accounting -->
-          <div class="grid md:grid-cols-12 gap-10 items-center group">
+          <div class="grid md:grid-cols-12 gap-10 items-center group tilt-card">
             <div class="md:col-span-7 aspect-video overflow-hidden">
               <div class="w-full h-full bg-surface-container-high transition-transform duration-700 group-hover:scale-105">
                 <img
@@ -590,7 +935,7 @@
           </div>
           <div class="grid md:grid-cols-3 gap-8">
             <!-- Landing Page -->
-            <div class="p-10 border border-outline-variant/10 bg-background hover-glow transition-all">
+            <div class="p-10 border border-outline-variant/10 bg-background hover-glow tilt-card transition-all">
               <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Standard</h4>
               <h3 class="font-headline-md text-headline-md mb-8">Landing Page</h3>
               <div class="mb-10">
@@ -613,12 +958,13 @@
                 href="https://forms.gle/EqWWU8xf4Rw3Wosx9"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Get Started</a
               >
+                Get Started
+              </a>
             </div>
 
             <!-- 5-Page -->
-            <div class="p-10 border-2 border-tertiary bg-surface-container-high relative scale-105 z-10 shadow-2xl">
+            <div class="p-10 border-2 border-tertiary bg-surface-container-high relative scale-105 z-10 shadow-2xl tilt-card">
               <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-tertiary text-on-tertiary px-4 py-1 font-label-caps text-[10px] uppercase tracking-widest">
                 Most Chosen
               </div>
@@ -647,12 +993,13 @@
                 href="https://forms.gle/EqWWU8xf4Rw3Wosx9"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Start Now</a
               >
+                Start Now
+              </a>
             </div>
 
             <!-- Custom -->
-            <div class="p-10 border border-outline-variant/10 bg-background hover-glow transition-all">
+            <div class="p-10 border border-outline-variant/10 bg-background hover-glow tilt-card transition-all">
               <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-4">Enterprise</h4>
               <h3 class="font-headline-md text-headline-md mb-8">Custom Solution</h3>
               <div class="mb-10">
@@ -675,30 +1022,11 @@
                 href="https://forms.gle/EqWWU8xf4Rw3Wosx9"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Inquire</a
               >
+                Inquire
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- CTA / Start Your Project -->
-      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="contact">
-        <div class="bg-surface-container-high p-12 md:p-24 relative overflow-hidden text-center">
-          <div class="relative z-10">
-            <h2 class="font-headline-lg text-headline-lg mb-8">Ready to define your digital footprint?</h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
-              Let's build something that doesn't just function—it commands. Book your discovery call today.
-            </p>
-            <a
-              class="inline-block px-12 py-5 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:scale-105 transition-all"
-              href="https://cal.com/theragasudha-info-amnqo1/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Schedule Discovery Call</a
-            >
-          </div>
-          <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
         </div>
       </section>
 
@@ -706,7 +1034,7 @@
       <section class="py-section-gap bg-surface-container-lowest reveal">
         <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
           <div class="grid md:grid-cols-3 gap-16">
-            <div class="space-y-6 italic">
+            <div class="space-y-6 italic testimonial-card bg-surface-container p-8 border border-outline-variant/10">
               <span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
               <p class="font-body-lg text-body-lg leading-relaxed">
                 "Raga Sudha completely transformed our online presence. The level of detail and editorial precision is something we couldn't find in
@@ -717,7 +1045,7 @@
                 <p class="text-xs text-on-surface-variant uppercase mt-1">Founder, Aurelius</p>
               </div>
             </div>
-            <div class="space-y-6 italic">
+            <div class="space-y-6 italic testimonial-card bg-surface-container p-8 border border-outline-variant/10">
               <span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
               <p class="font-body-lg text-body-lg leading-relaxed">
                 "Working with Raga was seamless. She understood our vision immediately and delivered a product that felt bespoke to our high-end brand."
@@ -727,7 +1055,7 @@
                 <p class="text-xs text-on-surface-variant uppercase mt-1">CEO, Applied Accounting</p>
               </div>
             </div>
-            <div class="space-y-6 italic">
+            <div class="space-y-6 italic testimonial-card bg-surface-container p-8 border border-outline-variant/10">
               <span class="material-symbols-outlined text-4xl text-tertiary opacity-40">format_quote</span>
               <p class="font-body-lg text-body-lg leading-relaxed">
                 "The no-code build is so fast and easy to manage. It's the perfect combination of professional design and practical utility."
@@ -829,6 +1157,27 @@
       </section>
     </main>
 
+    <!-- CTA / Start Your Project -->
+      <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="contact">
+        <div class="bg-surface-container-high p-12 md:p-24 relative overflow-hidden text-center cta-glow">
+          <div class="relative z-10">
+            <h2 class="font-headline-lg text-headline-lg mb-8">Ready to define your digital footprint?</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
+              Let's build something that doesn't just function—it commands. Book your discovery call today.
+            </p>
+            <a
+              class="inline-block px-12 py-5 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase hover:scale-105 transition-all"
+              href="https://cal.com/theragasudha-info-amnqo1/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule Discovery Call
+            </a>
+          </div>
+          <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
     <!-- Footer -->
     <footer class="bg-surface-container-lowest py-20 border-t border-outline-variant/10">
       <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
@@ -840,23 +1189,20 @@
               href="https://www.instagram.com/websitebyraga/"
               target="_blank"
               rel="noopener noreferrer"
-              >Instagram</a
-            >
+            >Instagram</a>
             <a
               class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300"
               href="https://www.linkedin.com/in/ragasudhawebdesigner/"
               target="_blank"
               rel="noopener noreferrer"
-              >LinkedIn</a
-            >
+            >LinkedIn</a>
             <a
               class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-tertiary transition-colors duration-300"
               href="mailto:connectwithragasudha@gmail.com"
-              >Email</a
-            >
+            >Email</a>
           </div>
         </div>
-        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/5">
+        <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-top border-outline-variant/5">
           <p class="text-on-surface-variant text-xs mb-4 md:mb-0">© 2026 Raga Sudha. All Rights Reserved.</p>
           <div class="flex gap-6 text-xs text-on-surface-variant">
             <a class="hover:text-tertiary" href="#">Privacy Policy</a>
@@ -865,118 +1211,161 @@
         </div>
       </div>
     </footer>
-<script>
-  // Reveal Animations
-  const observerOptions = { threshold: 0.1 };
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, observerOptions);
+    <script>
+      // Reveal Animations
+      const observerOptions = { threshold: 0.1 };
 
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-  // Process Circle Animations
-  const processObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active-circle");
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  document.querySelectorAll(".process-step").forEach(el => processObserver.observe(el));
-
-  // Custom Cursor
-  const cursor = document.getElementById("cursor");
-  document.addEventListener("mousemove", e => {
-    if (!cursor) return;
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-  });
-
-  document.querySelectorAll("a, button, details").forEach(link => {
-    link.addEventListener("mouseenter", () => {
-      if (!cursor) return;
-      cursor.style.width = "50px";
-      cursor.style.height = "50px";
-      cursor.style.background = "rgba(233, 193, 118, 0.1)";
-    });
-    link.addEventListener("mouseleave", () => {
-      if (!cursor) return;
-      cursor.style.width = "20px";
-      cursor.style.height = "20px";
-      cursor.style.background = "transparent";
-    });
-  });
-
-  // Smooth Scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      const targetId = this.getAttribute("href");
-      if (targetId && targetId.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(targetId);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-  });
-
-  // Mobile nav toggle
-  const navToggle = document.getElementById("nav-toggle");
-  const navMenuMobile = document.getElementById("nav-menu-mobile");
-
-  if (navToggle && navMenuMobile) {
-    navToggle.addEventListener("click", () => {
-      navMenuMobile.classList.toggle("hidden");
-    });
-  }
-
-  // Scroll circle transition
-  const scrollCircleWrapper = document.getElementById("scroll-circle");
-  const scrollCircleInner = scrollCircleWrapper?.querySelector(".scroll-circle-inner");
-
-  const circleSections = document.querySelectorAll("#services, #process, #work, #pricing, #contact");
-
-  if (scrollCircleInner && circleSections.length > 0) {
-    let lastTriggeredSection = null;
-
-    const circleObserver = new IntersectionObserver(
-      entries => {
+      const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
-            const id = entry.target.id || "";
-            if (lastTriggeredSection !== id) {
-              lastTriggeredSection = id;
-              scrollCircleInner.classList.add("is-active");
-              setTimeout(() => {
-                scrollCircleInner.classList.remove("is-active");
-              }, 650);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+      // Process Circle Animations
+      const processObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active-circle");
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      document.querySelectorAll(".process-step").forEach(el => processObserver.observe(el));
+
+      // Custom Cursor
+      const cursor = document.getElementById("cursor");
+      document.addEventListener("mousemove", e => {
+        if (!cursor) return;
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      document.querySelectorAll("a, button, details").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+          if (!cursor) return;
+          cursor.style.width = "50px";
+          cursor.style.height = "50px";
+          cursor.style.background = "rgba(233, 193, 118, 0.1)";
+        });
+        link.addEventListener("mouseleave", () => {
+          if (!cursor) return;
+          cursor.style.width = "20px";
+          cursor.style.height = "20px";
+          cursor.style.background = "transparent";
+        });
+      });
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href");
+          if (targetId && targetId.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(targetId);
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
             }
           }
         });
-      },
-      {
-        threshold: [0.3, 0.5, 0.7]
-      }
-    );
+      });
 
-    circleSections.forEach(section => circleObserver.observe(section));
+      // Mobile nav toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenuMobile = document.getElementById("nav-menu-mobile");
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY < 100) {
-        lastTriggeredSection = null;
+      if (navToggle && navMenuMobile) {
+        navToggle.addEventListener("click", () => {
+          navMenuMobile.classList.toggle("hidden");
+        });
       }
-    });
-  }
-</script>
-</body>
+
+      // Scroll circle transition
+      const scrollCircleWrapper = document.getElementById("scroll-circle");
+      const scrollCircleInner = scrollCircleWrapper?.querySelector(".scroll-circle-inner");
+
+      const circleSections = document.querySelectorAll("#services, #process, #work, #pricing, #contact");
+
+      if (scrollCircleInner && circleSections.length > 0) {
+        let lastTriggeredSection = null;
+
+        const circleObserver = new IntersectionObserver(
+          entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+                const id = entry.target.id || "";
+                if (lastTriggeredSection !== id) {
+                  lastTriggeredSection = id;
+                  scrollCircleInner.classList.add("is-active");
+                  setTimeout(() => {
+                    scrollCircleInner.classList.remove("is-active");
+                  }, 650);
+                }
+              }
+            });
+          },
+          {
+            threshold: [0.3, 0.5, 0.7]
+          }
+        );
+
+        circleSections.forEach(section => circleObserver.observe(section));
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY < 100) {
+            lastTriggeredSection = null;
+          }
+        });
+      }
+
+      // Flowing line for "What Makes Me Different"
+      const diffSections = document.querySelectorAll("section.bg-surface-container-lowest.reveal");
+      const diffSection = diffSections[1]; // second one = What Makes Me Different
+      const diffStepsContainer = document.getElementById("diff-steps");
+      const diffSteps = diffStepsContainer?.querySelectorAll(".diff-step");
+      const diffLineProgress = document.getElementById("diff-line-progress");
+
+      function updateDiffLine() {
+        if (!diffSection || !diffStepsContainer || !diffSteps || !diffLineProgress) return;
+
+        const rect = diffSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        if (rect.bottom <= 0 || rect.top >= viewportHeight) return;
+
+        const containerRect = diffStepsContainer.getBoundingClientRect();
+        const start = containerRect.top - viewportHeight * 0.15;
+        const end = containerRect.bottom - viewportHeight * 0.5;
+        const total = Math.max(end - start, 1);
+
+        let progress = (viewportHeight * 0.5 - start) / total;
+        progress = Math.max(0, Math.min(1, progress));
+
+        diffLineProgress.style.height = `${progress * 100}%`;
+
+        diffSteps.forEach(step => {
+          const stepRect = step.getBoundingClientRect();
+          const stepCenter = stepRect.top + stepRect.height / 2;
+          const threshold = viewportHeight * 0.5;
+
+          if (stepCenter <= threshold + 40) {
+            step.classList.add("is-active");
+          } else {
+            step.classList.remove("is-active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateDiffLine, { passive: true });
+      window.addEventListener("resize", updateDiffLine);
+      updateDiffLine();
+    </script>
+  </body>
 </html>
